@@ -163,9 +163,9 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Schneeweisse Yoshi-Skulpturen hängen an der Wand. Aus ihren Mündern quellen endlose Papierstreifen, fallen zu Boden und wachsen dort zu einem weissen Berg: produziert, verbreitet, vergessen.",
-          "Bla Blaa Blaa erinnert an die Wasserspiele barocker Gärten, in denen Brunnen zu Bildern von Überfluss, Macht und Inszenierung wurden. Bei Yoshi + Moshi fliesst kein Wasser mehr, sondern Content. Ein unaufhörlicher Strom von Information, der immer grösser wird und dabei immer weniger zu sagen scheint.",
-          "Schon Flaubert beschäftigte die absurde Fülle menschlichen Wissens. In Bouvard et Pécuchet sammeln, kopieren und ordnen seine beiden Protagonisten unermüdlich Wissen und verlieren sich gerade darin. Bei Yoshi + Moshi wird dieser Widerspruch zum räumlichen Bild: Die Produktion hört nie auf, der Papierberg wächst, doch die Bedeutung verflüchtigt sich. Yoshi + Moshi sagen nichts: Sie produzieren weiter.",
+          "White head sculptures hang on the wall. Endless strips of white paper pour from their mouths, fall to the floor and grow into a white mountain: produced, distributed, forgotten. An incessant stream of information, steadily expanding as meaning begins to disappear.",
+          "Bla Blaa Blaa recalls the fountains of Baroque gardens, where water became a symbol of power, abundance and spectacle.",
+          "Flaubert was already preoccupied with the absurd abundance of human knowledge. In Bouvard et Pécuchet, his two protagonists tirelessly collect, copy and organise knowledge, only to lose themselves in it. With Yoshi + Moshi, this contradiction becomes a spatial image.",
         ],
       },
     ],
@@ -177,9 +177,8 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Die Dance Dolls drehen sich, taumeln, tanzen, verlieren das Gleichgewicht und finden ein neues. Stillstehen können sie offenbar nicht besonders gut.",
-          "Seit Jahrhunderten steht der tanzende Körper in der Kunst für Freiheit, Ekstase und Verwandlung. Von den kreisenden Figuren Matisses bis zum modernen Tanz erzählt Bewegung immer auch von Veränderung.",
-          "Yoshi + Moshi nehmen das ziemlich wörtlich. Ihre Dance Dolls warten nicht auf den richtigen Moment, bessere Umstände oder einen perfekten Plan. Sie bewegen sich einfach. Denn jede Legende beginnt mit einer Vorstellung, nur leider reicht die Vorstellung allein nicht. Irgendwann muss man vom Sofa aufstehen.",
+          "The Dance Dolls move in subtle rotations through space. They are never entirely still. The slightest vibration, a current of air or the presence of a body is enough to set them in motion. Their movements follow no predetermined choreography, but emerge from an interplay of material, gravity and space. Each movement leads to another state, each shift to a new balance. The Dance Dolls resist stillness: they respond, drift and continually find new postures. Movement becomes not a spectacle, but a quiet and persistent form of transformation.",
+          "For centuries, the dancing body has embodied freedom, ecstasy and transformation in art – from the elemental circle of Matisse’s Dance to the shifting languages of modern dance.",
         ],
       },
     ],
@@ -191,10 +190,9 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Yoshi + Moshi haben es geschafft: Sie sind Superhelden. Und weil das offenbar noch nicht reicht, erschaffen sie sich auch noch ihr eigenes Ebenbild.",
-          "Mit Yoshini + Moshini treiben sie die Lust am eigenen Spiegelbild ins Absurde. Wie Narziss betrachten Yoshi + Moshi sich selbst, nur dass ihnen das Betrachten nicht genügt. Sie vervielfältigen sich, spielen mit sich selbst und werden zum Publikum ihrer eigenen Legende. Doch Yoshini + Moshini sind zugleich Stockpuppen. Yoshi + Moshi bewegen sie, inszenieren sie und spielen mit ihnen. Eigentlich ist klar, wer hier die Fäden in der Hand hat – aber nur eigentlich.",
-          "Und dann ist da dieses kleine Holzskelett. Keine Superkraft, keine Pose, kein Heldentum. Nur ein einfaches Gerüst, aus dem jedes mögliche Selbst entstehen kann.",
-          "Vielleicht beginnt jede Legende genau dort: mit einem einfachen Gerüst und einer ziemlich grossen Vorstellung von sich selbst.",
+          "Yoshi + Moshi are superheroes and antiheroes at once. And because that apparently isn’t quite enough, they also create their own likenesses.",
+          "With Yoshini + Moshini, they take the fascination with their own reflection to the point of absurdity. Like Narcissus, Yoshi + Moshi contemplate themselves, except that contemplation alone is not enough. They reproduce themselves, play with themselves and become the audience of their own legend.",
+          "Yet Yoshini + Moshini are, after all, rod puppets, built around a simple wooden skeleton. A basic structure from which any possible self can emerge. No superpowers, no pose, no heroism. Yoshi + Moshi move them, stage them and play with them.",
         ],
       },
     ],
@@ -206,9 +204,8 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Alle wollen Hauptdarsteller*innen sein, nur hier nicht.",
-          "Das Ensemble bringt Stockpuppen-Skulpturen auf einer gemeinsamen Bühne zusammen. Keine beansprucht das Zentrum für sich. Sie begegnen sich, reagieren aufeinander, bilden Gruppen, lösen sich wieder und schaffen ein Gefüge, das nur durch ihr Zusammenspiel existiert. Das Theater kennt diese Kraft seit seinen Anfängen: vom Chor der griechischen Tragödie bis zum modernen Ensembletheater. Bedeutung entsteht nicht allein durch den Protagonisten, sondern zwischen den Figuren – durch Nähe und Distanz, Zusammenspiel und Konflikt, durch Führen und Geführtwerden.",
-          "Das Ensemble setzt dem Narzissmus des Einzelnen die Kraft des Kollektivs entgegen. Die Stockpuppe, eigentlich Sinnbild des Geführtwerdens, wird dabei Teil eines gemeinsamen Spiels. Nicht das einzelne Ich bestimmt das Geschehen, sondern die Beziehungen zwischen vielen. Auch Legenden entstehen nicht allein. Sie brauchen Gegenüber, Mitspieler, Reibung und Resonanz.",
+          "The Ensemble brings a multitude of rod-puppet sculptures together on a shared stage. None claims the centre for itself. In this installation, group formations, encounters and interactions dominate, creating a suggestive interplay. Theatre has known this power since its beginnings: from the chorus of Greek tragedy to modern ensemble theatre. Meaning emerges not from the protagonist alone, but between the figures – through proximity and distance, play and conflict, leading and being led.",
+          "The Ensemble counters the narcissism of the individual with the power of the collective. The rod puppet, traditionally a symbol of being guided, becomes part of a collective interplay. It is not the individual who determines what happens, but the relationships between many. Legends, too, are not created alone. They need counterparts, fellow players, friction and resonance.",
         ],
       },
     ],
@@ -220,8 +217,8 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Eine Legende ohne Publikum hat ein Problem: Niemand kann davon erzählen.",
-          "Das Publikum besteht aus einäugigen Wesen auf Rädern. Zu schauen und sich zu bewegen gehören zu ihrer Natur. Sie wechseln die Perspektive, kommen näher, entfernen sich wieder – und sehen, wie wir alle, immer nur einen Teil des Ganzen. Im Theater kann die grösste Vorstellung stattfinden: Ohne Publikum bleibt sie eine private Angelegenheit. Auch Legenden brauchen Menschen, die sie sehen, sich an sie erinnern und ihre Geschichten weitererzählen. Und das eine Auge reicht dafür offenbar völlig aus. Mit zwei Augen wäre die Wahrheit schliesslich auch nicht garantiert. Yoshi + Moshi sind Legenden. Das Publikum entscheidet nicht darüber, aber ohne Publikum wüsste es niemand.",
+          "A legend without an audience is no legend – there is no one to tell its story.",
+          "The Audience consists of one-eyed sculptures on wheels. Watching and moving are part of their nature. They frequently shift perspective, move closer, drift away again – and see only part of the whole. In theatre, boundless worlds can unfold through performance. Without an audience, however, the performance remains without life.",
         ],
       },
     ],
@@ -233,8 +230,11 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Wer schaut hier eigentlich wem zu?",
-          "Im Theater trennt die unsichtbare vierte Wand Bühne und Publikum, Spiel und Wirklichkeit. Die 4. Wand dreht dieses Prinzip um. In der Projektion blicken die Big Heads auf die Installation – und plötzlich werden aus den Betrachteten selbst Betrachter. Damit geraten die Rollen völlig durcheinander. Sind Yoshi + Moshi die Protagonisten? Die Big Heads? Oder die Menschen im Raum, die ihrerseits beobachtet werden, während sie beobachten? Alle paar Minuten verändert sich das Bild radikal. Die Big Heads verschwinden und Yoshi + Moshi erscheinen. Fast wie ein Deus-ex-machina-Moment treten sie unvermittelt in das Geschehen ein, übernehmen für einen Moment die Bühne und verschwinden wieder. Danach kehren die anderen achtzehn Big Heads zurück und schauen weiter dem Treiben zu. Die vierte Wand trennt hier nicht mehr zwei Welten. Sie verbindet sie. Bühne und Zuschauerraum, Kunstwerk und Publikum, Beobachten und Beobachtetwerden beginnen sich gegenseitig zu spiegeln.",
+          "Who is watching whom?",
+          "In traditional theatre, the invisible fourth wall separates the stage from the audience, performance from reality. The performers on stage act as if the audience were not there. In the video projection The Fourth Wall, this direction of gaze is reversed: the Big Heads look out from the image into the exhibition space, observing the installation and the visitors moving through it.",
+          "But who are the real protagonists here? Yoshi + Moshi, the eighteen other Big Heads – or the visitors, who themselves become the observed?",
+          "The projection comes alive through the appearance and disappearance of the Big Heads. Suddenly, Yoshi + Moshi appear on the screen. For a moment, they take over the ‘stage’, gaze into the exhibition space and disappear again. The eighteen Big Heads then return and resume their silent observation.",
+          "Here, the fourth wall no longer separates two worlds. It becomes permeable, connecting the space of the image with the exhibition space, artwork with audience. Watching and being watched begin to mirror one another.",
         ],
       },
     ],
@@ -246,7 +246,9 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Yoshi + Moshi können nicht sprechen. Zum Glück können sie alles andere. In ihren Filmen und Performances wird die Welt zu ihrer Bühne. Sie reisen, begegnen Menschen, geraten in unmögliche Situationen, spielen, wiederholen, scheitern, verschwinden und tauchen wieder auf. Sie erklären nichts. Sie sind einfach da und überlassen den Rest unserer Fantasie. Damit stehen Yoshi + Moshi in einer langen Tradition von Performance, Theater und Film, in der Körper, Geste und Handlung mehr erzählen können als Worte. Zugleich erinnern sie an die grossen komischen Paare der Filmgeschichte: Zwei Figuren, eine Welt und genügend Möglichkeiten für Missverständnisse. Was Inszenierung ist und was Wirklichkeit, verliert dabei zunehmend an Bedeutung. Denn Yoshi + Moshi spielen keine Legenden: Sie leben ihre eigene.",
+          "Yoshi + Moshi do not speak. In their films and performances, the world is their stage. They travel, encounter people, find themselves in comic situations, play, repeat, fail, disappear and reappear. They explain nothing. They are simply there, wondering.",
+          "In doing so, Yoshi + Moshi stand within a long tradition of performance, theatre and film in which bodies, gestures and actions can tell stories differently from words. At the same time, they recall the great comic duos of film history: two figures, one world and endless possibilities for misunderstanding.",
+          "The distinction between what is staged and what is real becomes irrelevant. Because Yoshi + Moshi do not play at being legends: they live their own.",
         ],
       },
       {
@@ -293,13 +295,14 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "BECOME A LEGEND ist die erste grosse Kunstinstallation von Yoshi + Moshi. Skulptur, Malerei, Film, Performance und Puppenspiel verschmelzen zu einem begehbaren Kosmos, in dem die beiden tun, was Legenden eben tun: Sie erschaffen ihre eigene Realität.",
-          "Yoshi + Moshi sprechen nicht und sie erklären rein gar nichts. Und gerade darin liegt ihre Freiheit. Ihre Welt entsteht aus Blicken, Gesten, Bewegung, Begegnung und Spiel. Bedeutung wird nicht vorgegeben, sondern entsteht im Kopf des Publikums. Wer Yoshi + Moshi begegnet, wird unweigerlich zum Mitautor ihrer Geschichte.",
-          "Das macht ihre Welt heute erstaunlich aktuell. Wir leben in einer Zeit permanenter Sichtbarkeit und Selbstdarstellung. Wir produzieren, kommentieren, teilen und inszenieren uns unablässig. Jeder kann Sender, Darsteller und Publikum seiner eigenen Wirklichkeit zugleich sein. Mehr Bilder, mehr Worte, mehr Content – und immer die Frage, was davon bleibt.",
-          "Mitten in diesem Strom brauchen Yoshi + Moshi keine Worte. Sie schauen, staunen, spielen. Und sie bleiben analog.",
-          "Ihre Welt ist von Hand gemacht: Stoff, Holz, Papier, Farbe, Körper und Bewegung besitzen Gewicht, Oberfläche und Widerstand. Das Analoge ist dabei keine nostalgische Flucht aus der digitalen Gegenwart. Es erinnert an etwas, das sich nicht vollständig übertragen oder reproduzieren lässt: Berührung, Präsenz und die unmittelbare Erfahrung eines Gegenübers.",
-          "Poetisch, absurd und mit feinem Humor setzen Yoshi + Moshi der permanenten Sinnproduktion etwas erstaunlich Einfaches entgegen: ihre eigene Vorstellungskraft. Sie stellen unseren Wunsch auf die Probe, mehr zu sein als das, was wir bereits sind, und drehen dabei die Idee der Legende um. Eine Legende muss weder berühmt noch perfekt sein. Sie beginnt dort, wo wir der eigenen Wahrnehmung vertrauen, Möglichkeiten zulassen und den Mut haben, unsere Wirklichkeit selbst zu gestalten.",
-          "Yoshi + Moshi haben ihre Realität längst erschaffen. BECOME A LEGEND ist ihre Einladung an uns.",
+          "Yoshi + Moshi are two Big Heads – wordless beings who have been roaming the world since they first appeared in 2012. They have no fixed identity. They wonder, encounter, disappear and surprise. Wherever they turn up, reality shifts ever so slightly.",
+          "BECOME A LEGEND is the first major art installation by Yoshi + Moshi. Sculpture, film, painting, performance and puppetry merge into a walk-in universe. Yoshi + Moshi do what legends do: they create their own reality.",
+          "Yoshi + Moshi neither speak nor explain themselves. They have no verbal language. And therein lies their immense freedom. Their world is made of wonder, gesture, movement, encounter and play. Meaning is never prescribed. Anyone who encounters Yoshi + Moshi inevitably becomes a co-author of their universe.",
+          "This makes their world strikingly contemporary. We live in an age of permanent visibility and self-presentation. We can endlessly produce, comment, share and stage ourselves. Everyone can be broadcaster, performer and audience of their own reality at once. More images, more words, more content – and the question: what remains?",
+          "Yoshi + Moshi’s universe is made by hand: fabric, wood, paper, paint, bodies and movement have surface, weight and resistance. The analogue is not a nostalgic escape from the digital present. Yet it reminds us of something that cannot be transmitted or reproduced: touch, sensuality, presence and the immediate experience of encountering another.",
+          "Poetic, absurd and ironic, Yoshi + Moshi counter the relentless production of meaning with something surprisingly simple: their own imagination. They put our desire to become more than we already are to the test, while turning the very idea of the legend on its head. A legend need be neither famous nor perfect. It begins where we trust our own perception, allow possibilities to emerge, and have the courage and strength to assert a reality of our own making.",
+          "Yoshi + Moshi created their reality long ago.",
+          "BECOME A LEGEND is their invitation to us.",
         ],
       },
       {
@@ -354,21 +357,21 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Yoshi + Moshi verfügen in der Schweiz über ein Netzwerk zu Kantonen, Städten und Kulturstiftungen. Dadurch wird ein substanzieller Teil von BECOME A LEGEND aus der Schweiz mitfinanziert werden.",
-          "Mitfinanzierungen umfassen:",
+          "Yoshi + Moshi have an established network of cantons, cities and cultural foundations in Switzerland. This will allow a substantial part of BECOME A LEGEND to be co-financed from Switzerland.",
+          "Co-financing includes:",
         ],
         items: [
-          "Produktion der Kunstwerke",
-          "Skulpturen und Installationen",
-          "Film und Video",
-          "Transportkosten der Installation",
-          "Reise und Übernachtung des Yoshi + Moshi Teams",
-          "Verpflegung des Teams",
+          "Production of the artworks",
+          "Sculptures and installations",
+          "Film and video",
+          "Transport costs for the installation",
+          "Travel and accommodation for the Yoshi + Moshi team",
+          "Catering for the team",
         ],
       },
       {
         paragraphs: [
-          "So entsteht BECOME A LEGEND auch finanziell als gemeinsames Projekt zwischen Yoshi + Moshi und dem gastgebenden Kunsthaus.",
+          "In this way, BECOME A LEGEND also becomes a shared financial project between Yoshi + Moshi and the host art institution.",
         ],
       },
     ],
@@ -381,14 +384,14 @@ const detailContent: Record<string, DetailContent> = {
         heading: "Sculptures",
         items: [
           "Yoshini & Moshini",
-          "Ensemble-Skulpturen",
-          "Publikum auf Rädern",
+          "Ensemble sculptures",
+          "Audience on wheels",
           "Dance Dolls",
-          "Bla Blaa Blaa-Installation",
-          "+/- 50 Skulpturen",
-          "Videos +/- 15",
-          "4. Wand: 1 Projektion",
-          "Yoshi + Moshi Malerei: in Entwicklung",
+          "Bla Blaa Blaa installation",
+          "Approx. 50 sculptures",
+          "Approx. 15 videos",
+          "The Fourth Wall: 1 projection",
+          "Yoshi + Moshi paintings: in development",
         ],
       },
     ],
@@ -810,7 +813,7 @@ export default function Home() {
                   ) : detailId === "08" ? (
                     <div className="fourth-wall-media-cell nina-texts-panel">
                       <a className="nina-texts-trigger" href="nina-texts.pdf" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>
-                        Nina&apos;s Texte
+                        Nina&apos;s Texts
                       </a>
                     </div>
                   ) : (
