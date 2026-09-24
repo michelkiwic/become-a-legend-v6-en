@@ -26,6 +26,7 @@ type DetailSection = {
 type DetailContent = {
   number?: string;
   kicker: string;
+  spec?: string;
   title: string;
   sections: DetailSection[];
 };
@@ -103,7 +104,7 @@ const categories: Category[] = [
   },
   {
     id: "06",
-    name: "THE 4TH WALL",
+    name: "THE FOURTH WALL",
     point: { x: 64.5, y: 49.3 },
     detailSrc: "yoshi-moshi-model-stage-light.png",
     outline:
@@ -113,7 +114,7 @@ const categories: Category[] = [
   },
   {
     id: "07",
-    name: "FILMS + PERFORMANCES",
+    name: "FILMS & PERFORMANCES",
     point: { x: 47, y: 54.8 },
     detailSrc: "yoshi-moshi-model-stage-light.png",
     outline:
@@ -159,6 +160,7 @@ const detailContent: Record<string, DetailContent> = {
   "01": {
     number: "01",
     kicker: "More content = less meaning",
+    spec: "Sculptures, diameter 30 cm",
     title: "Bla Blaa Blaa",
     sections: [
       {
@@ -173,6 +175,7 @@ const detailContent: Record<string, DetailContent> = {
   "02": {
     number: "02",
     kicker: "No movement = no legend",
+    spec: "Sculptures, height 60 – 70 cm",
     title: "Dance Dolls",
     sections: [
       {
@@ -186,6 +189,7 @@ const detailContent: Record<string, DetailContent> = {
   "03": {
     number: "03",
     kicker: "Big ego = big legend",
+    spec: "Sculptures, height 68 cm",
     title: "Yoshini + Moshini",
     sections: [
       {
@@ -200,11 +204,12 @@ const detailContent: Record<string, DetailContent> = {
   "04": {
     number: "04",
     kicker: "Less me = more us",
+    spec: "Sculptures, height 75 – 100 cm",
     title: "The Ensemble",
     sections: [
       {
         paragraphs: [
-          "The Ensemble brings a multitude of rod-puppet sculptures together on a shared stage. None claims the centre for itself. In this installation, group formations, encounters and interactions dominate, creating a suggestive interplay. Theatre has known this power since its beginnings: from the chorus of Greek tragedy to modern ensemble theatre. Meaning emerges not from the protagonist alone, but between the figures – through proximity and distance, play and conflict, leading and being led.",
+          "The Ensemble brings a multitude of rod-puppet sculptures together on a shared stage. None claims the centre for itself. In this installation, group formations, encounters and interactions dominate, creating an evocative interplay. Theatre has known this power since its beginnings: from the chorus of Greek tragedy to modern ensemble theatre. Meaning emerges not from the protagonist alone, but between the figures – through proximity and distance, play and conflict, leading and being led.",
           "The Ensemble counters the narcissism of the individual with the power of the collective. The rod puppet, traditionally a symbol of being guided, becomes part of a collective interplay. It is not the individual who determines what happens, but the relationships between many. Legends, too, are not created alone. They need counterparts, fellow players, friction and resonance.",
         ],
       },
@@ -218,15 +223,15 @@ const detailContent: Record<string, DetailContent> = {
       {
         paragraphs: [
           "A legend without an audience is no legend – there is no one to tell its story.",
-          "The Audience consists of one-eyed sculptures on wheels. Watching and moving are part of their nature. They frequently shift perspective, move closer, drift away again – and see only part of the whole. In theatre, boundless worlds can unfold through performance. Without an audience, however, the performance remains without life.",
+          "The Audience consists of one-eyed sculptures on wheels. Watching and moving are part of their nature. They frequently shift perspective, move closer, drift away again – and see only part of the whole. In theatre, boundless worlds can unfold through performance. Without an audience, however, the performance cannot come alive.",
         ],
       },
     ],
   },
   "06": {
     number: "06",
-    kicker: "You look = they look",
-    title: "The 4th Wall",
+    kicker: "Watching = being watched",
+    title: "The Fourth Wall",
     sections: [
       {
         paragraphs: [
@@ -242,13 +247,13 @@ const detailContent: Record<string, DetailContent> = {
   "07": {
     number: "07",
     kicker: "No words = full story",
-    title: "Films + Performances",
+    title: "Films & Performances",
     sections: [
       {
         paragraphs: [
-          "Yoshi + Moshi do not speak. In their films and performances, the world is their stage. They travel, encounter people, find themselves in comic situations, play, repeat, fail, disappear and reappear. They explain nothing. They are simply there, wondering.",
+          "Yoshi + Moshi do not speak. In their films and performances, the world is their stage. They travel, encounter people, find themselves in comic situations, play, repeat, fail, disappear and reappear. They explain nothing. They are simply there, marvelling.",
           "In doing so, Yoshi + Moshi stand within a long tradition of performance, theatre and film in which bodies, gestures and actions can tell stories differently from words. At the same time, they recall the great comic duos of film history: two figures, one world and endless possibilities for misunderstanding.",
-          "The distinction between what is staged and what is real becomes irrelevant. Because Yoshi + Moshi do not play at being legends: they live their own.",
+          "The distinction between what is staged and what is real becomes irrelevant. Because Yoshi + Moshi do not play at being legends: they live their own legend.",
         ],
       },
       {
@@ -295,11 +300,11 @@ const detailContent: Record<string, DetailContent> = {
     sections: [
       {
         paragraphs: [
-          "Yoshi + Moshi are two Big Heads – wordless beings who have been roaming the world since they first appeared in 2012. They have no fixed identity. They wonder, encounter, disappear and surprise. Wherever they turn up, reality shifts ever so slightly.",
+          "Yoshi + Moshi are two Big Heads – wordless beings who have been roaming the world since they first appeared in 2012. They have no fixed identity. They marvel, encounter, disappear and surprise. Wherever they turn up, reality shifts ever so slightly.",
           "BECOME A LEGEND is the first major art installation by Yoshi + Moshi. Sculpture, film, painting, performance and puppetry merge into a walk-in universe. Yoshi + Moshi do what legends do: they create their own reality.",
           "Yoshi + Moshi neither speak nor explain themselves. They have no verbal language. And therein lies their immense freedom. Their world is made of wonder, gesture, movement, encounter and play. Meaning is never prescribed. Anyone who encounters Yoshi + Moshi inevitably becomes a co-author of their universe.",
           "This makes their world strikingly contemporary. We live in an age of permanent visibility and self-presentation. We can endlessly produce, comment, share and stage ourselves. Everyone can be broadcaster, performer and audience of their own reality at once. More images, more words, more content – and the question: what remains?",
-          "Yoshi + Moshi’s universe is made by hand: fabric, wood, paper, paint, bodies and movement have surface, weight and resistance. The analogue is not a nostalgic escape from the digital present. Yet it reminds us of something that cannot be transmitted or reproduced: touch, sensuality, presence and the immediate experience of encountering another.",
+          "Yoshi + Moshi’s universe is made by hand: fabric, wood, paper, paint, bodies and movement have texture, weight and resistance. This analogue materiality is not a nostalgic escape from the digital present. Yet it reminds us of something that cannot be transmitted or reproduced: touch, sensuality, presence and the immediate experience of encountering another.",
           "Poetic, absurd and ironic, Yoshi + Moshi counter the relentless production of meaning with something surprisingly simple: their own imagination. They put our desire to become more than we already are to the test, while turning the very idea of the legend on its head. A legend need be neither famous nor perfect. It begins where we trust our own perception, allow possibilities to emerge, and have the courage and strength to assert a reality of our own making.",
           "Yoshi + Moshi created their reality long ago.",
           "BECOME A LEGEND is their invitation to us.",
@@ -734,6 +739,9 @@ export default function Home() {
                     ) : activeDetailContent.title}
                   </h1>
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
+                  {activeDetailContent.spec ? (
+                    <p className="detail-spec">{activeDetailContent.spec}</p>
+                  ) : null}
                 </header>
                 <div className={`fourth-wall-media${["contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
                   {detailId === "01" || suppliedDetailImage ? (
