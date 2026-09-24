@@ -437,7 +437,7 @@ const suppliedDetailImages: Record<string, { src: string; alt: string }> = {
 
 const suppliedDetailVideos: Record<string, { src: string; poster?: string; label: string }> = {
   "01": { src: "bla-blaa-blaa-video.webm?v=afb6eb3", label: "Bla Blaa Blaa video" },
-  "02": { src: "dance-dolls-video.webm", label: "Dance Dolls video" },
+  "02": { src: "dance-dolls-video.webm?v=20260924-double", label: "Dance Dolls video" },
   "03": { src: "yoshini-moshini-loop-v2.webm", label: "Yoshini and Moshini performance video" },
   "04": { src: "the-ensemble-loop-v2.webm", label: "The Ensemble performance video" },
   "05": { src: "the-audience-loop-v4.webm", label: "The Audience performance video" },
