@@ -297,6 +297,7 @@ const detailContent: Record<string, DetailContent> = {
   "08": {
     number: "08",
     kicker: "No words = more worlds",
+    spec: "Exhibition in development",
     title: "Become a Legend",
     sections: [
       {
@@ -447,6 +448,7 @@ const suppliedDetailVideos: Record<string, { src: string; poster?: string; label
   "03": { src: "yoshini-moshini-loop-v2.webm", label: "Yoshini and Moshini performance video" },
   "04": { src: "the-ensemble-loop-v2.webm", label: "The Ensemble performance video" },
   "05": { src: "the-audience-loop-v4.webm", label: "The Audience performance video" },
+  "06": { src: "the-fourth-wall-grid.webm", label: "The Fourth Wall video projection" },
 };
 
 export default function Home() {
@@ -732,8 +734,21 @@ export default function Home() {
                   </h1>
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
                 </header>
-                <div className={`fourth-wall-media${["08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
-                  {detailId === "01" || suppliedDetailImage ? (
+                <div className={`fourth-wall-media${["06", "08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
+                  {detailId === "06" ? (
+                    <div className="fourth-wall-media-cell fourth-wall-media-cell-motion detail-video-cell">
+                      <video
+                        className="fourth-wall-image fourth-wall-image-motion detail-video"
+                        src={suppliedDetailVideos["06"].src}
+                        aria-label={suppliedDetailVideos["06"].label}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                      />
+                    </div>
+                  ) : detailId === "01" || suppliedDetailImage ? (
                     <div className="fourth-wall-media-cell">
                       <img
                         className="fourth-wall-image fourth-wall-image-still"
@@ -761,7 +776,7 @@ export default function Home() {
                       />
                     </div>
                   )}
-                  {["08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? null : suppliedDetailVideos[detailId ?? ""] ? (
+                  {["06", "08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? null : suppliedDetailVideos[detailId ?? ""] ? (
                     <div className="fourth-wall-media-cell fourth-wall-media-cell-motion detail-video-cell">
                       <video
                         className="fourth-wall-image fourth-wall-image-motion detail-video"
