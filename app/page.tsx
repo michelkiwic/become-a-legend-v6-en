@@ -312,7 +312,7 @@ const detailContent: Record<string, DetailContent> = {
         ],
       },
       {
-        heading: "Literary References",
+        heading: "Literary references:",
         items: [
           "Gustave Flaubert",
           "Jorge Luis Borges",
@@ -854,7 +854,7 @@ export default function Home() {
             </button>}
           </div>
           </div>
-          {activeDetailContent && detailId !== "08" ? (
+          {activeDetailContent ? (
             <article
               className={`detail-text-below${isDetailOpen ? "" : " is-closing"}`}
               aria-label={`Text for ${activeDetailContent.title}`}
@@ -862,7 +862,9 @@ export default function Home() {
               {activeDetailContent.spec ? (
                 <h2 className="detail-spec-heading">{activeDetailContent.spec}</h2>
               ) : null}
-              {activeDetailContent.sections.map((section, sectionIndex) => (
+              {activeDetailContent.sections
+                .slice(0, detailId === "08" ? 2 : undefined)
+                .map((section, sectionIndex) => (
                 <section className="detail-text-section" key={`below-${detailId}-section-${sectionIndex}`}>
                   {section.heading ? <h2>{section.heading}</h2> : null}
                   {section.paragraphs?.map((paragraph, paragraphIndex) =>
