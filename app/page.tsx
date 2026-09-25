@@ -386,7 +386,7 @@ const detailContent: Record<string, DetailContent> = {
     title: "Inventory",
     sections: [
       {
-        heading: "Sculptures",
+        heading: "Content",
         items: [
           "Yoshini & Moshini",
           "Ensemble sculptures",
