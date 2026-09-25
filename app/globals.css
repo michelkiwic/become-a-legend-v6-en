@@ -1325,12 +1325,14 @@ a:focus-visible {
 }
 
 .detail-text-below > .detail-text-section {
-  max-width: 58em;
+  width: 100%;
+  max-width: 58rem;
   margin-inline: auto;
 }
 
 .detail-text-below > .detail-spec-heading {
-  max-width: 58em;
+  width: 100%;
+  max-width: 58rem;
   margin: 0 auto 1.25rem;
   font-size: clamp(1.1rem, 1.8cqw, 1.45rem);
   font-weight: 900;
