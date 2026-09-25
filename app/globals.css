@@ -1301,7 +1301,7 @@ a:focus-visible {
   animation: detail-text-slide-in 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
   width: 100%;
   margin: 0 0 clamp(30px, 4cqw, 56px);
-  padding: clamp(28px, 4cqw, 56px) clamp(22px, 6cqw, 84px);
+  padding: clamp(28px, 4cqw, 56px) clamp(16px, 4cqw, 56px);
   border-top: clamp(6px, 0.9cqw, 12px) solid var(--rebel-pink);
   background: var(--paper);
   box-shadow: clamp(8px, 2cqw, 24px) clamp(8px, 2cqw, 24px) 0 rgba(10, 10, 10, 0.96);
@@ -1327,13 +1327,14 @@ a:focus-visible {
 .detail-text-below > .detail-text-section {
   width: 100%;
   max-width: 58rem;
-  margin-inline: auto;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .detail-text-below > .detail-spec-heading {
   width: 100%;
   max-width: 58rem;
-  margin: 0 auto 1.25rem;
+  margin: 0 auto 1.25rem 0;
   font-size: clamp(1.1rem, 1.8cqw, 1.45rem);
   font-weight: 900;
   line-height: 1.05;
