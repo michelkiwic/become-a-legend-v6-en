@@ -1333,6 +1333,25 @@ a:focus-visible {
   padding-left: 1.2rem;
 }
 
+.detail-text-below .ninas-view-link {
+  margin-top: clamp(24px, 3cqw, 40px);
+}
+
+.ninas-view-link a {
+  color: var(--rebel-pink);
+  font-size: clamp(1.15rem, 2cqw, 1.65rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+  text-transform: uppercase;
+}
+
+.ninas-view-link a:hover,
+.ninas-view-link a:focus-visible {
+  color: var(--ink);
+}
+
 .category-detail-information .detail-copy {
   width: min(66%, 760px);
   max-height: 84%;

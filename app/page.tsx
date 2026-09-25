@@ -887,6 +887,13 @@ export default function Home() {
                       ))}
                     </ul>
                   ) : null}
+                  {detailId === "08" && sectionIndex === 0 ? (
+                    <p className="ninas-view-link">
+                      <a href="ninas-view-of-yoshi-moshi.pdf" target="_blank" rel="noreferrer">
+                        Nina&apos;s View of Yoshi + Moshi
+                      </a>
+                    </p>
+                  ) : null}
                 </section>
               ))}
             </article>
