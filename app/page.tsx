@@ -218,6 +218,7 @@ const detailContent: Record<string, DetailContent> = {
   "05": {
     number: "05",
     kicker: "No audience = no story",
+    spec: "Sculptures, height 30-40 cm",
     title: "The Audience",
     sections: [
       {
@@ -382,7 +383,7 @@ const detailContent: Record<string, DetailContent> = {
     ],
   },
   inventory: {
-    kicker: "Become a Legend / Inventory",
+    kicker: "Many works = one world",
     title: "Inventory",
     sections: [
       {
