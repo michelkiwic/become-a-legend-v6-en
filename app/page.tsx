@@ -403,7 +403,7 @@ const detailContent: Record<string, DetailContent> = {
     ],
   },
   contacts: {
-    kicker: "Yoshi + Moshi / Team",
+    kicker: "Yoshi + Moshi + Team",
     title: "Contact",
     sections: [
       {
@@ -732,7 +732,7 @@ export default function Home() {
                   </h1>
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
                 </header>
-                <div className={`fourth-wall-media${["contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
+                <div className={`fourth-wall-media${["08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
                   {detailId === "01" || suppliedDetailImage ? (
                     <div className="fourth-wall-media-cell">
                       <img
@@ -761,7 +761,7 @@ export default function Home() {
                       />
                     </div>
                   )}
-                  {["contacts", "inventory", "finances"].includes(detailId ?? "") ? null : suppliedDetailVideos[detailId ?? ""] ? (
+                  {["08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? null : suppliedDetailVideos[detailId ?? ""] ? (
                     <div className="fourth-wall-media-cell fourth-wall-media-cell-motion detail-video-cell">
                       <video
                         className="fourth-wall-image fourth-wall-image-motion detail-video"
@@ -806,12 +806,6 @@ export default function Home() {
                         alt={detailCategory.closeup?.alt ?? `Figure for ${detailCategory.name}`}
                         draggable={false}
                       />
-                    </div>
-                  ) : detailId === "08" ? (
-                    <div className="fourth-wall-media-cell nina-texts-panel">
-                      <a className="nina-texts-trigger" href="nina-texts.pdf" target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>
-                        Nina&apos;s Texts
-                      </a>
                     </div>
                   ) : (
                     <div className="fourth-wall-media-cell fourth-wall-media-cell-motion">
@@ -871,9 +865,19 @@ export default function Home() {
               {activeDetailContent.sections.map((section, sectionIndex) => (
                 <section className="detail-text-section" key={`below-${detailId}-section-${sectionIndex}`}>
                   {section.heading ? <h2>{section.heading}</h2> : null}
-                  {section.paragraphs?.map((paragraph, paragraphIndex) => (
-                    <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>{paragraph}</p>
-                  ))}
+                  {section.paragraphs?.map((paragraph, paragraphIndex) =>
+                    detailId === "contacts" && sectionIndex === 0 && paragraphIndex === 0 ? (
+                      <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
+                        Via Industria 21<br />
+                        6850 Mendrisio<br />
+                        Switzerland<br /><br />
+                        <a href="mailto:yoshi-moshi@yoshi-moshi.com">yoshi-moshi@yoshi-moshi.com</a><br />
+                        <a href="https://www.yoshi-moshi.com" target="_blank" rel="noreferrer">www.yoshi-moshi.com</a>
+                      </p>
+                    ) : (
+                      <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>{paragraph}</p>
+                    ),
+                  )}
                   {section.items ? (
                     <ul>
                       {section.items.map((item) => (
