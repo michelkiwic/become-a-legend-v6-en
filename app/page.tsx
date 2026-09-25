@@ -705,15 +705,6 @@ export default function Home() {
             className={`category-detail category-detail-${detailId}${detailCategory ? "" : " category-detail-information"}${detailId !== "07" ? " category-detail-unified" : ""}`}
             aria-labelledby="category-detail-title"
             key={detailId}
-            role="button"
-            tabIndex={0}
-            onClick={() => returnToModel()}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                returnToModel();
-              }
-            }}
           >
             {detailId !== "07" ? (
               <div className="fourth-wall-layout">
@@ -739,9 +730,6 @@ export default function Home() {
                     ) : activeDetailContent.title}
                   </h1>
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
-                  {activeDetailContent.spec ? (
-                    <p className="detail-spec">{activeDetailContent.spec}</p>
-                  ) : null}
                 </header>
                 <div className={`fourth-wall-media${["contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
                   {detailId === "01" || suppliedDetailImage ? (
@@ -875,16 +863,10 @@ export default function Home() {
             <article
               className={`detail-text-below${isDetailOpen ? "" : " is-closing"}`}
               aria-label={`Text for ${activeDetailContent.title}`}
-              role="button"
-              tabIndex={0}
-              onClick={() => returnToModel()}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  event.preventDefault();
-                  returnToModel();
-                }
-              }}
             >
+              {activeDetailContent.spec ? (
+                <h2 className="detail-spec-heading">{activeDetailContent.spec}</h2>
+              ) : null}
               {activeDetailContent.sections.map((section, sectionIndex) => (
                 <section className="detail-text-section" key={`below-${detailId}-section-${sectionIndex}`}>
                   {section.heading ? <h2>{section.heading}</h2> : null}
