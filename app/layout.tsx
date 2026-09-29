@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "Yoshi + Moshi · Become a Legend",
   description: "An interactive model of the Yoshi + Moshi exhibition by Nina Staehli.",
 };

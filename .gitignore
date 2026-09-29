@@ -45,3 +45,5 @@ v3-dev*.log
 /.wrangler/
 /outputs/
 /work/
+
+/metanet-dist/

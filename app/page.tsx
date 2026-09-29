@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Category = {
   id: string;
@@ -146,15 +146,6 @@ const videoWallClipOrder = [1, 2, 9, 4, 5, 6, 7, 8, 3, 10, 11, 12];
 const videoWallClips = videoWallClipOrder.map(
   (clipNumber) => `video-wall/clip-${String(clipNumber).padStart(2, "0")}.webm`,
 );
-
-const fourthWallStillImages = [
-  "closeup-u1.webp",
-  "closeup-u2.webp",
-  "closeup-u3.webp",
-  "closeup-u4-white.webp",
-  "closeup-u5-white.webp",
-  "closeup-u6.webp",
-];
 
 const detailContent: Record<string, DetailContent> = {
   "01": {
@@ -451,16 +442,29 @@ const suppliedDetailVideos: Record<string, { src: string; poster?: string; label
   "06": { src: "the-fourth-wall-grid.webm", label: "The Fourth Wall video projection" },
 };
 
+function detailFromLocation(): string | null {
+  if (typeof window === "undefined") return null;
+  const id = window.location.hash.slice(1);
+  return Object.hasOwn(detailContent, id) ? id : null;
+}
+
+function rememberEntry() {
+  try { window.sessionStorage.setItem("yoshi-model-entered", "true"); } catch { /* Storage may be disabled. */ }
+}
+
+function initialEntryStage(): 0 | 2 {
+  if (detailFromLocation()) return 2;
+  try { return window.sessionStorage.getItem("yoshi-model-entered") === "true" ? 2 : 0; }
+  catch { return 0; }
+}
+
 export default function Home() {
-  const [entryStage, setEntryStage] = useState<0 | 1 | 2>(() =>
-    typeof window !== "undefined" && window.sessionStorage.getItem("yoshi-model-entered") === "true" ? 2 : 0,
-  );
+  const [entryStage, setEntryStage] = useState<0 | 1 | 2>(initialEntryStage);
   const hasEntered = entryStage === 2;
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const [detailId, setDetailId] = useState<string | null>(null);
-  const [isDetailOpen, setIsDetailOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(detailFromLocation);
+  const [detailId, setDetailId] = useState<string | null>(detailFromLocation);
+  const [isDetailOpen, setIsDetailOpen] = useState(() => Boolean(detailFromLocation()));
   const [menuOpen, setMenuOpen] = useState(false);
-  const [fourthWallStill, setFourthWallStill] = useState(fourthWallStillImages[0]);
   const detailExitTimer = useRef<number | null>(null);
   const handlingBrowserBack = useRef(false);
   const activeCategory = categories.find((category) => category.id === activeId);
@@ -468,9 +472,7 @@ export default function Home() {
   const activeDetailContent = detailId ? detailContent[detailId] : null;
   const hasUnifiedDetail = Boolean(activeDetailContent && detailId !== "07");
   const secondaryDetailImage =
-    detailId === "06"
-      ? fourthWallStill
-      : detailId === "08" || !detailCategory
+    detailId === "08" || !detailCategory
         ? "yoshi-moshi-logo.webp"
         : detailCategory.closeup?.src ?? detailCategory.detailSrc;
   const suppliedDetailImage = detailId ? suppliedDetailImages[detailId] : null;
@@ -507,27 +509,23 @@ export default function Home() {
 
     setActiveId(id);
     setDetailId(id);
-    window.sessionStorage.setItem("yoshi-model-entered", "true");
+    rememberEntry();
     const detailState = { yoshiView: "detail", yoshiDetail: id };
     if (window.history.state?.yoshiDetail) {
       window.history.replaceState(detailState, "", `#${id}`);
     } else {
       window.history.pushState(detailState, "", `#${id}`);
     }
-    if (id === "06") {
-      setFourthWallStill(
-        fourthWallStillImages[Math.floor(Math.random() * fourthWallStillImages.length)],
-      );
-    }
     window.requestAnimationFrame(() => setIsDetailOpen(true));
   };
 
-  const returnToModel = (fromBrowserBack = false) => {
+  const returnToModel = useCallback((fromBrowserBack = false) => {
     if (!fromBrowserBack && window.history.state?.yoshiDetail) {
       handlingBrowserBack.current = true;
       window.history.back();
       return;
     }
+    if (!fromBrowserBack) window.history.replaceState({ yoshiView: "model" }, "", "#model");
     setMenuOpen(false);
     setActiveId(null);
 
@@ -544,26 +542,32 @@ export default function Home() {
       setDetailId(null);
       detailExitTimer.current = null;
     }, 720);
-  };
+  }, [detailId]);
 
   useEffect(() => {
     const handlePopState = () => {
-      window.sessionStorage.setItem("yoshi-model-entered", "true");
+      rememberEntry();
       setEntryStage(2);
       if (handlingBrowserBack.current) {
         handlingBrowserBack.current = false;
       }
-      if (detailId) {
+      const nextDetail = detailFromLocation();
+      if (nextDetail) {
+        if (detailExitTimer.current !== null) window.clearTimeout(detailExitTimer.current);
+        setDetailId(nextDetail);
+        setActiveId(nextDetail);
+        setIsDetailOpen(true);
+      } else {
         returnToModel(true);
       }
     };
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
-  }, [detailId]);
+  }, [detailId, returnToModel]);
 
   const enterModel = () => {
-    window.sessionStorage.setItem("yoshi-model-entered", "true");
+    rememberEntry();
     window.history.replaceState({ yoshiView: "model" }, "", window.location.href);
     setEntryStage(2);
   };
@@ -665,7 +669,7 @@ export default function Home() {
               <span />
             </button>
 
-            <nav className={`site-menu${menuOpen ? " is-open" : ""}`} id="site-menu" aria-label="Exhibition menu">
+            <nav className={`site-menu${menuOpen ? " is-open" : ""}`} id="site-menu" aria-label="Exhibition menu" aria-hidden={!menuOpen} inert={!menuOpen}>
               {categories.map((category) => (
                 <a
                   href="#model"
