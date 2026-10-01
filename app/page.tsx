@@ -930,6 +930,10 @@ export default function Home() {
             LEGEND
           </div>
 
+          <div className="handmade-model-stamp" aria-label="100% Handmade">
+            <img src="handmade-stamp.png" alt="100% Handmade" draggable={false} />
+          </div>
+
           <button
             className="model-footer-action model-footer-solo"
             type="button"
