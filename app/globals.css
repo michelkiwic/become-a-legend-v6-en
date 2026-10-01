@@ -1646,6 +1646,7 @@ a:focus-visible {
   width: 42%;
   min-width: 0;
   font-size: clamp(0.78rem, 1.45cqw, 1.35rem);
+  letter-spacing: 0.035em;
   line-height: 0.95;
   transform: rotate(1deg);
   animation: footer-inventory-wobble 3.6s 0.45s ease-in-out infinite;
