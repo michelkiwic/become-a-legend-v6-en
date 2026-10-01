@@ -1632,9 +1632,9 @@ a:focus-visible {
 .handmade-model-stamp {
   position: absolute;
   z-index: 4;
-  top: 3%;
-  left: 3%;
-  width: clamp(92px, 14cqw, 170px);
+  top: 5%;
+  left: 6%;
+  width: clamp(130px, 20cqw, 240px);
   animation: handmade-stamp-float 4.8s ease-in-out infinite;
   pointer-events: none;
   user-select: none;
