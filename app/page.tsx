@@ -983,18 +983,6 @@ export default function Home() {
             {activeCategory ? (
               <g className="ink-frame">
                 <path className="ink-frame-stroke" d={activeCategory.frameOutline ?? activeCategory.outline} />
-                <path className="ink-frame-flecks" d={activeCategory.frameOutline ?? activeCategory.outline} />
-                <g className="ink-splatter">
-                  <circle cx={activeCategory.point.x - 7.4} cy={activeCategory.point.y - 10.2} r="0.58" />
-                  <circle cx={activeCategory.point.x - 5.7} cy={activeCategory.point.y - 11.5} r="0.26" />
-                  <circle cx={activeCategory.point.x - 4.3} cy={activeCategory.point.y - 10.7} r="0.17" />
-                  <circle cx={activeCategory.point.x + 8.1} cy={activeCategory.point.y + 7.6} r="0.48" />
-                  <circle cx={activeCategory.point.x + 9.5} cy={activeCategory.point.y + 6.4} r="0.2" />
-                  <path
-                    className="ink-drip"
-                    d={`M ${activeCategory.point.x - 7.5} ${activeCategory.point.y - 9.8} v 4.2 M ${activeCategory.point.x - 5.8} ${activeCategory.point.y - 10.5} v 2.4 M ${activeCategory.point.x + 8.2} ${activeCategory.point.y + 7.3} v 3.1`}
-                  />
-                </g>
               </g>
             ) : null}
           </svg>
