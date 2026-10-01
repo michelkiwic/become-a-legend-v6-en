@@ -931,34 +931,11 @@ export default function Home() {
           </div>
 
           <button
-            className="funded-button"
-            type="button"
-            aria-label="Fully funded – Open finances"
-            onClick={() => showDetail("finances")}
-          >
-            <span className="funded-button-face">Fully funded!</span>
-          </button>
-
-          <button
-            className="model-footer-action model-footer-finances"
-            type="button"
-            onClick={() => showDetail("finances")}
-          >
-            Finances
-          </button>
-          <button
-            className="model-footer-action model-footer-inventory"
+            className="model-footer-action model-footer-solo"
             type="button"
             onClick={() => showDetail("inventory")}
           >
-            Inventory
-          </button>
-          <button
-            className="model-footer-action model-footer-contacts"
-            type="button"
-            onClick={() => showDetail("contacts")}
-          >
-            Contact
+            Our soloshow we proposed to you
           </button>
 
           <svg
