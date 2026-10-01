@@ -421,7 +421,7 @@ const detailContent: Record<string, DetailContent> = {
       },
       {
         heading: "Michel Kiwic",
-        paragraphs: ["Animation, film editing, sound, website"],
+        paragraphs: ["Animation, film editing, website"],
       },
       {
         heading: "Walter Willimann",
