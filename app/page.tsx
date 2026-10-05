@@ -933,7 +933,7 @@ export default function Home() {
           <button
             className="model-footer-action model-footer-solo"
             type="button"
-            onClick={() => showDetail("inventory")}
+            onClick={() => showDetail("finances")}
           >
             This is our model. Let’s create the exhibition together!
           </button>
