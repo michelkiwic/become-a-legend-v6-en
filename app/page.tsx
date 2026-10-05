@@ -978,6 +978,7 @@ export default function Home() {
                 onFocus={() => setActiveId(category.id)}
                 onClick={() => toggleCategory(category.id)}
               >
+                <span className="mobile-pin" aria-hidden="true">{category.id}</span>
                 <span className="marker-name">{category.name}</span>
               </button>
             );
@@ -991,6 +992,26 @@ export default function Home() {
           />
 
         </div>
+
+        {!activeDetailContent ? (
+          <nav className="mobile-model-guide" aria-label="Explore the exhibition">
+            <p className="mobile-guide-kicker">A WORLD MADE BY HAND</p>
+            <h2>Step inside.</h2>
+            <p>Tap a number in the model or choose a world below.</p>
+            <div className="mobile-worlds">
+              {categories.map((category) => (
+                <button key={category.id} type="button" onClick={() => { showDetail(category.id); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+                  <span>{category.id}</span><strong>{category.name}</strong><span aria-hidden="true">↗</span>
+                </button>
+              ))}
+            </div>
+            <div className="mobile-utility-links">
+              {utilityCategories.map((category) => (
+                <button key={category.id} type="button" onClick={() => { showDetail(category.detailId); window.scrollTo({ top: 0, behavior: "smooth" }); }}>{category.name}</button>
+              ))}
+            </div>
+          </nav>
+        ) : null}
 
           </div>
         </div>
