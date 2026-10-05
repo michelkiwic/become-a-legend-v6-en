@@ -849,6 +849,23 @@ a:focus-visible {
   min-height: 3px;
 }
 
+.model-menu-toggle.is-open > span {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 60%;
+  height: 3px;
+  min-height: 0;
+}
+
+.model-menu-toggle.is-open > span:nth-child(1) {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.model-menu-toggle.is-open > span:nth-child(3) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 .model-frame {
   position: relative;
   width: 100%;
