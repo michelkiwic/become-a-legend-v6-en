@@ -137,7 +137,7 @@ const categories: Category[] = [
 ];
 
 const utilityCategories = [
-  { id: "09", name: "Finances", detailId: "finances" },
+  { id: "09", name: "Funding", detailId: "finances" },
   { id: "10", name: "Inventory", detailId: "inventory" },
   { id: "11", name: "Contact", detailId: "contacts" },
 ];
