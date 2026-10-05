@@ -935,7 +935,7 @@ export default function Home() {
             type="button"
             onClick={() => showDetail("inventory")}
           >
-            Our soloshow we proposed to you
+            This is our model. Let’s create the exhibition together!
           </button>
 
           <svg
