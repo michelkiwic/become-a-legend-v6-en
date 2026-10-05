@@ -1629,34 +1629,6 @@ a:focus-visible {
   transition: transform 180ms cubic-bezier(0.16, 1.35, 0.3, 1), box-shadow 180ms ease, background 180ms ease;
 }
 
-.handmade-model-stamp {
-  position: absolute;
-  z-index: 4;
-  top: 5%;
-  left: 6%;
-  width: clamp(130px, 20cqw, 240px);
-  animation: handmade-stamp-float 4.8s ease-in-out infinite;
-  pointer-events: none;
-  user-select: none;
-}
-
-.handmade-model-stamp img {
-  display: block;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.55));
-}
-
-@keyframes handmade-stamp-float {
-  0%,
-  100% {
-    transform: rotate(-4deg) translateY(0);
-  }
-  50% {
-    transform: rotate(-1deg) translateY(-5px);
-  }
-}
-
 .model-footer-finances {
   left: 17%;
   transform: rotate(-2deg);
