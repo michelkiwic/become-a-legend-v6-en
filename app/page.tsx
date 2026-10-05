@@ -231,7 +231,7 @@ const detailContent: Record<string, DetailContent> = {
   },
   "06": {
     number: "06",
-    kicker: "Watching = being watched",
+    kicker: "Who watches = who’s watched",
     title: "The Fourth Wall",
     sections: [
       {
