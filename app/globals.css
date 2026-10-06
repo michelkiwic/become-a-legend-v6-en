@@ -1659,11 +1659,12 @@ a:focus-visible {
 }
 
 .model-footer-solo {
-  left: 29%;
-  width: 42%;
+  left: 15%;
+  width: 70%;
   min-width: 0;
   font-size: clamp(0.78rem, 1.45cqw, 1.35rem);
   letter-spacing: 0.035em;
+  white-space: nowrap;
   line-height: 0.95;
   transform: rotate(1deg);
   animation: footer-inventory-wobble 3.6s 0.45s ease-in-out infinite;
@@ -2655,7 +2656,7 @@ a:focus-visible {
   .model-main-title { font-size: clamp(1.65rem, 6vw, 2.8rem); }
   .model-menu-toggle,
   .model-column.has-unified-detail .model-menu-toggle:not(.is-open) { width: 48px; height: 48px; top: 14px; right: 14px; }
-  .model-footer-solo { left: 8%; width: 84%; font-size: 12px; min-height: 44px; top: 87%; padding: 8px 12px; line-height: 1.15; }
+  .model-footer-solo { left: 4%; width: 92%; font-size: clamp(7px, 1.75vw, 13px); min-height: 44px; top: 87%; padding: 8px 6px; line-height: 1.15; }
   .image-marker { width: 44px; height: 44px; justify-content: center; }
   .image-marker .marker-name { display: none; }
   .mobile-pin { display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid #fff; border-radius: 50%; background: var(--rebel-pink); color: white; font-size: 12px; font-weight: 900; box-shadow: 2px 3px 0 #000; }
