@@ -998,7 +998,7 @@ export default function Home() {
 
         </div>
 
-        {!activeDetailContent ? (
+        {!activeDetailContent || !isDetailOpen ? (
           <nav className="mobile-model-guide" aria-label="Explore the exhibition">
             <p className="mobile-guide-kicker">A WORLD MADE BY HAND</p>
             <h2>Step inside.</h2>
