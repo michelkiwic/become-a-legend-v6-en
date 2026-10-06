@@ -2731,6 +2731,18 @@ a:focus-visible {
   }
 }
 
+@media (min-width: 761px) {
+  .model-column .model-menu-toggle,
+  .model-column .model-menu-toggle.is-open,
+  .model-column.has-unified-detail .model-menu-toggle:not(.is-open) {
+    position: fixed;
+    top: 26px;
+    right: 18px;
+    width: 72px;
+    height: 64px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
