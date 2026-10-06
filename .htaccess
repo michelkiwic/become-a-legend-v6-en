@@ -1,5 +1,5 @@
 # This pitch is accessible by link, but must not appear in search results.
-# mod_headers is deliberately required: do not silently omit noindex.
+# Keep the header protection in addition to the HTML robots meta tag.
 Header always set X-Robots-Tag "noindex, nofollow"
 Options -Indexes
 DirectoryIndex index.html
