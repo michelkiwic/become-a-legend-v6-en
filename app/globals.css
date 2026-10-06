@@ -2704,7 +2704,7 @@ a:focus-visible {
 
 @media (max-width: 760px) {
   .model-column:not(.has-detail) .model-menu-toggle:not(.is-open) {
-    top: 14px;
+    top: 40px;
     right: 14px;
     width: 48px;
     height: 48px;
