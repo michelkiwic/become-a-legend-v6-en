@@ -2684,7 +2684,11 @@ a:focus-visible {
   .detail-text-below { padding: 24px 20px; font-size: 16px; line-height: 1.6; }
   .detail-text-below > .detail-text-section,
   .detail-text-below > .detail-spec-heading { width: 100%; max-width: none; margin-left: 0; margin-right: 0; }
-  .video-wall { height: auto; min-height: 100svh; grid-template-columns: repeat(2, 1fr); }
+  .category-transition .category-detail-07 { position: relative; height: auto; }
+  .category-detail-07 .video-wall { position: relative; inset: auto; height: auto; min-height: 0; padding-top: 100px; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(6, auto); }
+  .category-detail-07 .video-wall-clip { aspect-ratio: 4 / 3; height: auto; }
+  .category-detail-07 .video-wall-title { top: 66px; left: 12px; right: 12px; bottom: auto; font-size: 20px; transform: none; }
+  .category-detail-07 .detail-back { top: 14px; left: 12px; min-height: 44px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
