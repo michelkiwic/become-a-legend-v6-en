@@ -2735,9 +2735,9 @@ a:focus-visible {
   .model-column .model-menu-toggle,
   .model-column .model-menu-toggle.is-open,
   .model-column.has-unified-detail .model-menu-toggle:not(.is-open) {
-    position: absolute;
-    top: calc(clamp(18px, 2.5cqw, 32px) + clamp(6px, 0.9cqw, 12px) + 6px);
-    right: clamp(16px, 4cqw, 56px);
+    position: fixed;
+    top: 26px;
+    right: 18px;
     width: 72px;
     height: 64px;
   }
