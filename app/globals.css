@@ -849,23 +849,6 @@ a:focus-visible {
   min-height: 3px;
 }
 
-.model-menu-toggle.is-open > span {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  width: 60%;
-  height: 3px;
-  min-height: 0;
-}
-
-.model-menu-toggle.is-open > span:nth-child(1) {
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.model-menu-toggle.is-open > span:nth-child(3) {
-  transform: translateY(-50%) rotate(-45deg);
-}
-
 .model-frame {
   position: relative;
   width: 100%;
@@ -2696,11 +2679,6 @@ a:focus-visible {
   .model-column.is-returning-to-model .detail-text-below.is-closing { display: none; }
   .category-transition { aspect-ratio: auto; }
   .fourth-wall-heading { padding: 20px; }
-  .model-column.has-unified-detail .model-menu-toggle:not(.is-open) { top: 26px; height: 48px; }
-  .model-column:not(.has-detail) .model-menu-toggle:not(.is-open) { top: 26px; height: 48px; }
-  .category-detail-unified .detail-navigation { min-height: 48px; }
-  .category-detail-unified .detail-navigation .detail-back { height: 48px; min-height: 48px; padding-block: 8px; }
-  .model-column.has-detail:not(.has-unified-detail) .model-menu-toggle:not(.is-open) { top: 14px; height: 53px; }
   .detail-primary-title { font-size: clamp(2rem, 9vw, 3.5rem); line-height: .95; overflow-wrap: anywhere; }
   .detail-kicker { font-size: 13px; line-height: 1.4; }
   .category-detail-unified .fourth-wall-media { aspect-ratio: auto; grid-template-columns: 1fr; padding-top: 6px; gap: 6px; }
@@ -2714,33 +2692,6 @@ a:focus-visible {
   .category-detail-07 .video-wall-clip { aspect-ratio: 4 / 3; height: auto; }
   .category-detail-07 .video-wall-title { top: 81px; left: 12px; right: 12px; bottom: auto; height: 24px; box-sizing: border-box; font-size: 20px; box-shadow: none; transform: none; }
   .category-detail-07 .detail-back { top: 14px; left: 12px; height: 53px; min-height: 44px; }
-}
-
-@media (max-width: 760px) {
-  /* Use viewport coordinates in every view and menu state. */
-  .model-column .model-menu-toggle,
-  .model-column .model-menu-toggle.is-open,
-  .model-column.has-unified-detail .model-menu-toggle:not(.is-open),
-  .model-column.has-detail:not(.has-unified-detail) .model-menu-toggle:not(.is-open),
-  .model-column:not(.has-detail) .model-menu-toggle:not(.is-open) {
-    position: fixed;
-    top: 26px;
-    right: 14px;
-    width: 48px;
-    height: 48px;
-  }
-}
-
-@media (min-width: 761px) {
-  .model-column .model-menu-toggle,
-  .model-column .model-menu-toggle.is-open,
-  .model-column.has-unified-detail .model-menu-toggle:not(.is-open) {
-    position: fixed;
-    top: 26px;
-    right: 18px;
-    width: 72px;
-    height: 64px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
