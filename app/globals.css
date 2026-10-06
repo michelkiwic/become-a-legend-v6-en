@@ -2694,6 +2694,23 @@ a:focus-visible {
   .category-detail-07 .detail-back { top: 14px; left: 12px; height: 53px; min-height: 44px; }
 }
 
+/* Match the model's closed menu to the unified detail-page header. */
+.model-column:not(.has-detail) .model-menu-toggle:not(.is-open) {
+  top: clamp(24px, 3.4cqw, 44px);
+  right: clamp(16px, 4cqw, 56px);
+  width: 72px;
+  height: 64px;
+}
+
+@media (max-width: 760px) {
+  .model-column:not(.has-detail) .model-menu-toggle:not(.is-open) {
+    top: 14px;
+    right: 14px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
