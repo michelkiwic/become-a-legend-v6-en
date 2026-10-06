@@ -520,6 +520,8 @@ export default function Home() {
     }
     if (id === "06") {
       setFourthWallStill(
+        // This runs only from navigation/click handlers, never during render.
+        // eslint-disable-next-line react-hooks/purity
         fourthWallStillImages[Math.floor(Math.random() * fourthWallStillImages.length)],
       );
     }
