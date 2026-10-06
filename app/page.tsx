@@ -544,11 +544,11 @@ export default function Home() {
     if (detailExitTimer.current !== null) {
       window.clearTimeout(detailExitTimer.current);
     }
-    // Restore the complete model in one render, without the stretched
-    // transition-image placeholder or delayed layout change.
-    detailExitTimer.current = null;
-    setDetailId(null);
     window.scrollTo({ top: 0, behavior: "instant" });
+    detailExitTimer.current = window.setTimeout(() => {
+      setDetailId(null);
+      detailExitTimer.current = null;
+    }, 720);
   };
 
   useEffect(() => {
@@ -656,7 +656,7 @@ export default function Home() {
     >
       <section className="model-section" id="model" aria-label="Interactive exhibition model">
         <div className="exhibition-layout">
-          <div className={`model-column${hasUnifiedDetail ? " has-unified-detail" : ""}${activeDetailContent ? " has-detail" : ""}`}>
+          <div className={`model-column${hasUnifiedDetail ? " has-unified-detail" : ""}${activeDetailContent ? " has-detail" : ""}${activeDetailContent && !isDetailOpen ? " is-returning-to-model" : ""}`}>
             <button
               className={`menu-toggle model-menu-toggle${menuOpen ? " is-open" : ""}`}
               type="button"
