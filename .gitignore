@@ -42,6 +42,7 @@ v3-dev*.log
 
 /dist/
 /github-pages-dist/
+/metanet-dist/
 /.wrangler/
 /outputs/
 /work/
