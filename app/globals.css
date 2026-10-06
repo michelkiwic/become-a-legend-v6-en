@@ -2697,6 +2697,7 @@ a:focus-visible {
   .category-transition { aspect-ratio: auto; }
   .fourth-wall-heading { padding: 20px; }
   .model-column.has-unified-detail .model-menu-toggle:not(.is-open) { top: 26px; height: 48px; }
+  .model-column:not(.has-detail) .model-menu-toggle:not(.is-open) { top: 26px; height: 48px; }
   .category-detail-unified .detail-navigation { min-height: 48px; }
   .category-detail-unified .detail-navigation .detail-back { height: 48px; min-height: 48px; padding-block: 8px; }
   .model-column.has-detail:not(.has-unified-detail) .model-menu-toggle:not(.is-open) { top: 14px; height: 53px; }
