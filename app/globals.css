@@ -2676,6 +2676,10 @@ a:focus-visible {
   .model-column.has-detail .model-frame { display: none; }
   .category-transition { aspect-ratio: auto; }
   .fourth-wall-heading { padding: 20px; }
+  .model-column.has-unified-detail .model-menu-toggle:not(.is-open) { top: 26px; height: 48px; }
+  .category-detail-unified .detail-navigation { min-height: 48px; }
+  .category-detail-unified .detail-navigation .detail-back { height: 48px; min-height: 48px; padding-block: 8px; }
+  .model-column.has-detail:not(.has-unified-detail) .model-menu-toggle:not(.is-open) { top: 14px; height: 53px; }
   .detail-primary-title { font-size: clamp(2rem, 9vw, 3.5rem); line-height: .95; overflow-wrap: anywhere; }
   .detail-kicker { font-size: 13px; line-height: 1.4; }
   .category-detail-unified .fourth-wall-media { aspect-ratio: auto; grid-template-columns: 1fr; padding-top: 6px; gap: 6px; }
