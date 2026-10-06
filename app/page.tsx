@@ -243,7 +243,7 @@ const detailContent: Record<string, DetailContent> = {
           "Who is watching whom?",
           "In traditional theatre, the invisible fourth wall separates the stage from the audience, performance from reality. The performers on stage act as if the audience were not there. In the video projection The Fourth Wall, this direction of gaze is reversed: the Big Heads look out from the image into the exhibition space, observing the installation and the visitors moving through it.",
           "But who are the real protagonists here? Yoshi + Moshi, the eighteen other Big Heads – or the visitors, who themselves become the observed?",
-          "The projection comes alive through the appearance and disappearance of the Big Heads. Suddenly, Yoshi + Moshi appear on the screen. For a moment, they take over the ‘stage’, gaze into the exhibition space and disappear again. The eighteen Big Heads then return and resume their silent observation.",
+          "The projection comes alive through the appearance and disappearance of the Big Heads. Suddenly, Yoshi + Moshi appear on the screen. For a moment, they take over the ‘stage’, gaze into the exhibition space and disappear again. The eighteen Big Heads then return and resume their silent observation (in development).",
           "Here, the fourth wall no longer separates two worlds. It becomes permeable, connecting the space of the image with the exhibition space, artwork with audience. Watching and being watched begin to mirror one another.",
         ],
       },
