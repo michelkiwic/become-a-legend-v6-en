@@ -136,6 +136,10 @@ const categories: Category[] = [
   },
 ];
 
+const modelCategoryOrder = ["01", "02", "07", "06", "03", "05", "04", "08"];
+const modelCategoryNumber = (id: string) => String(modelCategoryOrder.indexOf(id) + 1).padStart(2, "0");
+const orderedModelCategories = modelCategoryOrder.map((id) => categories.find((category) => category.id === id)!);
+
 const utilityCategories = [
   { id: "09", name: "Funding", detailId: "finances" },
   { id: "10", name: "Inventory", detailId: "inventory" },
@@ -972,13 +976,13 @@ export default function Home() {
                 className={`image-marker${isActive ? " is-active" : ""}`}
                 style={{ left: `${category.point.x}%`, top: `${category.point.y}%` }}
                 type="button"
-                aria-label={`${category.id}: ${category.name}`}
+                aria-label={`${modelCategoryNumber(category.id)}: ${category.name}`}
                 aria-pressed={isActive}
                 onMouseEnter={() => setActiveId(category.id)}
                 onFocus={() => setActiveId(category.id)}
                 onClick={() => toggleCategory(category.id)}
               >
-                <span className="mobile-pin" aria-hidden="true">{category.id}</span>
+                <span className="mobile-pin" aria-hidden="true">{modelCategoryNumber(category.id)}</span>
                 <span className="marker-name">{category.name}</span>
               </button>
             );
@@ -999,9 +1003,9 @@ export default function Home() {
             <h2>Step inside.</h2>
             <p>Tap a number in the model or choose a world below.</p>
             <div className="mobile-worlds">
-              {categories.map((category) => (
+              {orderedModelCategories.map((category) => (
                 <button key={category.id} type="button" onClick={() => { showDetail(category.id); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-                  <span>{category.id}</span><strong>{category.name}</strong><span aria-hidden="true">↗</span>
+                  <span>{modelCategoryNumber(category.id)}</span><strong>{category.name}</strong><span aria-hidden="true">↗</span>
                 </button>
               ))}
             </div>
