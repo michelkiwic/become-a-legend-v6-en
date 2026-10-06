@@ -2716,6 +2716,21 @@ a:focus-visible {
   .category-detail-07 .detail-back { top: 14px; left: 12px; height: 53px; min-height: 44px; }
 }
 
+@media (max-width: 760px) {
+  /* Use viewport coordinates in every view and menu state. */
+  .model-column .model-menu-toggle,
+  .model-column .model-menu-toggle.is-open,
+  .model-column.has-unified-detail .model-menu-toggle:not(.is-open),
+  .model-column.has-detail:not(.has-unified-detail) .model-menu-toggle:not(.is-open),
+  .model-column:not(.has-detail) .model-menu-toggle:not(.is-open) {
+    position: fixed;
+    top: 26px;
+    right: 14px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
