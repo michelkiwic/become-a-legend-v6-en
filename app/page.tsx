@@ -452,7 +452,7 @@ const suppliedDetailVideos: Record<string, { src: string; poster?: string; label
   "03": { src: "yoshini-moshini-loop-v2.webm", label: "Yoshini and Moshini performance video" },
   "04": { src: "the-ensemble-loop-v2.webm", label: "The Ensemble performance video" },
   "05": { src: "the-audience-loop-v4.webm", label: "The Audience performance video" },
-  "06": { src: "the-fourth-wall-grid.webm", label: "The Fourth Wall video projection" },
+  "06": { src: "the-fourth-wall-white.webm", label: "The Fourth Wall video projection" },
 };
 
 export default function Home() {
