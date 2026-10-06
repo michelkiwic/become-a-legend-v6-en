@@ -2686,7 +2686,7 @@ a:focus-visible {
   .model-column.has-detail:not(.is-returning-to-model) .model-frame { display: none; }
   .model-column.is-returning-to-model .model-frame { position: relative; }
   .model-column.is-returning-to-model .category-transition { position: absolute; inset: 0 0 auto; width: 100%; }
-  .model-column.is-returning-to-model .detail-text-below.is-closing { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; pointer-events: none; }
+  .model-column.is-returning-to-model .detail-text-below.is-closing { display: none; }
   .category-transition { aspect-ratio: auto; }
   .fourth-wall-heading { padding: 20px; }
   .model-column.has-unified-detail .model-menu-toggle:not(.is-open) { top: 26px; height: 48px; }
