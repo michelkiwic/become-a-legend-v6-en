@@ -2749,6 +2749,14 @@ a:focus-visible {
     grid-template-rows: repeat(3, 3px);
     row-gap: clamp(4px, .7cqw, 8px);
   }
+  .model-column:not(.has-detail) .model-menu-toggle:not(.is-open),
+  .model-column.has-unified-detail .model-menu-toggle:not(.is-open) {
+    width: clamp(36px, 7cqw, 72px);
+    height: clamp(36px, 6.5cqw, 64px);
+    padding: clamp(8px, 1.2cqw, 14px);
+    grid-template-rows: repeat(3, 3px);
+    row-gap: clamp(4px, .7cqw, 8px);
+  }
   .model-column .model-main-title { font-size: 3.4cqw; }
   .model-column .marker-name { font-size: 2.2cqw; }
   .model-column .model-footer-solo {
