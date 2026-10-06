@@ -2711,6 +2711,17 @@ a:focus-visible {
   }
 }
 
+@media (max-width: 760px) {
+  .model-column.has-unified-detail .model-menu-toggle:not(.is-open) {
+    top: 40px;
+    height: 48px;
+  }
+  .model-column.has-detail:not(.has-unified-detail) .model-menu-toggle:not(.is-open) {
+    top: 16.5px;
+    height: 48px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
