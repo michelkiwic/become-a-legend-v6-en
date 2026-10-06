@@ -2685,10 +2685,10 @@ a:focus-visible {
   .detail-text-below > .detail-text-section,
   .detail-text-below > .detail-spec-heading { width: 100%; max-width: none; margin-left: 0; margin-right: 0; }
   .category-transition .category-detail-07 { position: relative; height: auto; }
-  .category-detail-07 .video-wall { position: relative; inset: auto; height: auto; min-height: 0; padding-top: 132px; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(6, auto); }
+  .category-detail-07 .video-wall { position: relative; inset: auto; height: auto; min-height: 0; padding-top: 119px; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(6, auto); }
   .category-detail-07 .video-wall-clip { aspect-ratio: 4 / 3; height: auto; }
-  .category-detail-07 .video-wall-title { top: 94px; left: 12px; right: 12px; bottom: auto; font-size: 20px; transform: none; }
-  .category-detail-07 .detail-back { top: 14px; left: 12px; min-height: 44px; }
+  .category-detail-07 .video-wall-title { top: 81px; left: 12px; right: 12px; bottom: auto; height: 24px; box-sizing: border-box; font-size: 20px; box-shadow: none; transform: none; }
+  .category-detail-07 .detail-back { top: 14px; left: 12px; height: 53px; min-height: 44px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
