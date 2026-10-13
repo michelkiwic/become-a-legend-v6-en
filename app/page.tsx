@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Protect the exhibition name while leaving surrounding text translatable.
+// Protect exhibition and artwork names while leaving surrounding text translatable.
 function ExhibitionText({ children }: { children: string }) {
-  return children.split(/(\bbecome a legend\b)/gi).map((part, index) =>
+  const names = /(\b(?:become\s+a\s+legend|dance\s+dolls|the\s+ensemble|bla\s+blaa\s+blaa|the\s+audience|the\s+fourth\s+wall|yoshini\s*(?:\+|&|and)\s*moshini)\b)/gi;
+  return children.split(names).map((part, index) =>
     index % 2 === 1 ? (
-      <span key={index} translate="no" className="notranslate">{part}</span>
+      <span key={index} translate="no" className="notranslate" lang="en">{part}</span>
     ) : part,
   );
 }
@@ -692,7 +693,7 @@ export default function Home() {
                     setMenuOpen(false);
                   }}
                 >
-                  <strong>{category.name}</strong>
+                  <strong><ExhibitionText>{category.name}</ExhibitionText></strong>
                 </a>
               ))}
               {utilityCategories.map((category) => (
@@ -715,7 +716,7 @@ export default function Home() {
             <div className={`category-transition${isDetailOpen ? " is-detail-open" : ""}`}>
             <div className="model-transition-panel" aria-hidden="true">
               <img src="yoshi-moshi-model-stage-light.png" alt="" draggable={false} />
-              <div className="model-main-title notranslate" translate="no">
+              <div className="model-main-title notranslate" translate="no" lang="en">
                 BECOME A<br />
                 LEGEND
               </div>
@@ -737,8 +738,10 @@ export default function Home() {
                     </button>
                   </div>
                   <h1
-                    className={`detail-primary-title${detailId === "03" ? " detail-primary-title-pair" : ""}`}
+                    className={`detail-primary-title${detailId === "03" ? " detail-primary-title-pair notranslate" : ""}`}
                     id="category-detail-title"
+                    translate={detailId === "03" ? "no" : undefined}
+                    lang={detailId === "03" ? "en" : undefined}
                   >
                     {detailId === "03" ? (
                       <>
@@ -750,7 +753,7 @@ export default function Home() {
                   </h1>
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
                 </header>
-                <div className={`fourth-wall-media${["06", "08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
+                <div className={`fourth-wall-media notranslate${["06", "08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`} translate="no" lang="en">
                   {detailId === "06" ? (
                     <div className="fourth-wall-media-cell fourth-wall-media-cell-motion detail-video-cell">
                       <video
@@ -888,7 +891,7 @@ export default function Home() {
           {activeDetailContent ? (
             <article
               className={`detail-text-below${isDetailOpen ? "" : " is-closing"}`}
-              aria-label={`Text for ${activeDetailContent.title}`}
+              aria-labelledby="category-detail-title"
             >
               {activeDetailContent.spec ? (
                 <h2 className="detail-spec-heading">{activeDetailContent.spec}</h2>
@@ -897,7 +900,7 @@ export default function Home() {
                 .slice(0, detailId === "08" ? 2 : undefined)
                 .map((section, sectionIndex) => (
                 <section className="detail-text-section" key={`below-${detailId}-section-${sectionIndex}`}>
-                  {section.heading ? <h2>{section.heading}</h2> : null}
+                  {section.heading ? <h2><ExhibitionText>{section.heading}</ExhibitionText></h2> : null}
                   {section.paragraphs?.map((paragraph, paragraphIndex) =>
                     detailId === "contacts" && sectionIndex === 0 && paragraphIndex === 0 ? (
                       <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
@@ -916,7 +919,7 @@ export default function Home() {
                   {section.items ? (
                     <ul>
                       {section.items.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item}><ExhibitionText>{item}</ExhibitionText></li>
                       ))}
                     </ul>
                   ) : null}
@@ -943,7 +946,7 @@ export default function Home() {
             alt="Yoshi and Moshi presenting a miniature exhibition model with eight exhibition categories"
             draggable={false}
           />
-          <div className="model-main-title notranslate" translate="no" aria-label="Become a Legend">
+          <div className="model-main-title notranslate" translate="no" lang="en" aria-label="Become a Legend">
             BECOME A<br />
             LEGEND
           </div>
@@ -997,7 +1000,7 @@ export default function Home() {
                 onClick={() => toggleCategory(category.id)}
               >
                 <span className="mobile-pin" aria-hidden="true">{modelCategoryNumber(category.id)}</span>
-                <span className="marker-name">{category.name}</span>
+                <span className="marker-name"><ExhibitionText>{category.name}</ExhibitionText></span>
               </button>
             );
           })}
@@ -1019,7 +1022,7 @@ export default function Home() {
             <div className="mobile-worlds">
               {orderedModelCategories.map((category) => (
                 <button key={category.id} type="button" onClick={() => { showDetail(category.id); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-                  <span>{modelCategoryNumber(category.id)}</span><strong>{category.name}</strong><span aria-hidden="true">↗</span>
+                  <span>{modelCategoryNumber(category.id)}</span><strong><ExhibitionText>{category.name}</ExhibitionText></strong><span aria-hidden="true">↗</span>
                 </button>
               ))}
             </div>
