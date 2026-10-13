@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <head>
+      <head translate="no" className="notranslate">
         <link
           rel="preload"
           href="yoshi-moshi-jungle-loop.mp4"

@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
   globalIgnores([
     ".next/**",
     "dist/**",
+    "github-pages-dist/**",
     "metanet-dist/**",
     "out/**",
     "build/**",

@@ -2,6 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 
+// Protect the exhibition name while leaving surrounding text translatable.
+function ExhibitionText({ children }: { children: string }) {
+  return children.split(/(\bbecome a legend\b)/gi).map((part, index) =>
+    index % 2 === 1 ? (
+      <span key={index} translate="no" className="notranslate">{part}</span>
+    ) : part,
+  );
+}
+
 type Category = {
   id: string;
   name: string;
@@ -706,7 +715,7 @@ export default function Home() {
             <div className={`category-transition${isDetailOpen ? " is-detail-open" : ""}`}>
             <div className="model-transition-panel" aria-hidden="true">
               <img src="yoshi-moshi-model-stage-light.png" alt="" draggable={false} />
-              <div className="model-main-title">
+              <div className="model-main-title notranslate" translate="no">
                 BECOME A<br />
                 LEGEND
               </div>
@@ -737,7 +746,7 @@ export default function Home() {
                         <span className="detail-title-plus">+</span>
                         <span>Moshini</span>
                       </>
-                    ) : activeDetailContent.title}
+                    ) : <ExhibitionText>{activeDetailContent.title}</ExhibitionText>}
                   </h1>
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
                 </header>
@@ -899,7 +908,9 @@ export default function Home() {
                         <a href="https://www.yoshi-moshi.com" target="_blank" rel="noreferrer">www.yoshi-moshi.com</a>
                       </p>
                     ) : (
-                      <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>{paragraph}</p>
+                      <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
+                        <ExhibitionText>{paragraph}</ExhibitionText>
+                      </p>
                     ),
                   )}
                   {section.items ? (
@@ -932,7 +943,7 @@ export default function Home() {
             alt="Yoshi and Moshi presenting a miniature exhibition model with eight exhibition categories"
             draggable={false}
           />
-          <div className="model-main-title" aria-label="Become a Legend">
+          <div className="model-main-title notranslate" translate="no" aria-label="Become a Legend">
             BECOME A<br />
             LEGEND
           </div>
