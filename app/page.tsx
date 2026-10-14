@@ -694,7 +694,7 @@ export default function Home() {
                     setMenuOpen(false);
                   }}
                 >
-                  <strong><ExhibitionText>{category.name}</ExhibitionText></strong>
+                  <strong translate="no" className="notranslate">{category.name}</strong>
                 </a>
               ))}
               {utilityCategories.map((category) => (
@@ -742,7 +742,7 @@ export default function Home() {
                   <h1
                     className={`detail-primary-title${detailId === "03" ? " detail-primary-title-pair" : ""}`}
                     id="category-detail-title"
-                    translate="yes"
+                    translate="no"
                   >
                     {detailId === "03" ? (
                       <>
@@ -750,9 +750,9 @@ export default function Home() {
                         <span className="detail-title-plus">+</span>
                         <span translate="no" className="notranslate">Moshini</span>
                       </>
-                    ) : <ExhibitionText>{activeDetailContent.title}</ExhibitionText>}
+                    ) : activeDetailContent.title}
                   </h1>
-                  <p className="detail-kicker" translate="yes">{activeDetailContent.kicker}</p>
+                  <p className="detail-kicker notranslate" translate="no">{activeDetailContent.kicker}</p>
                 </header>
                 <div className={`fourth-wall-media${["06", "08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
                   {detailId === "06" ? (
@@ -874,7 +874,7 @@ export default function Home() {
                   />
                   </div>
                 ))}
-                <h1 className="video-wall-title" id="category-detail-title">Films + Performances</h1>
+                <h1 className="video-wall-title notranslate" translate="no" id="category-detail-title">Films + Performances</h1>
               </div>
             )}
 
@@ -1003,7 +1003,7 @@ export default function Home() {
                 onClick={() => toggleCategory(category.id)}
               >
                 <span className="mobile-pin" aria-hidden="true">{modelCategoryNumber(category.id)}</span>
-                <span className="marker-name"><ExhibitionText>{category.name}</ExhibitionText></span>
+                <span className="marker-name notranslate" translate="no">{category.name}</span>
               </button>
             );
           })}
@@ -1025,7 +1025,7 @@ export default function Home() {
             <div className="mobile-worlds">
               {orderedModelCategories.map((category) => (
                 <button key={category.id} type="button" onClick={() => { showDetail(category.id); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-                  <span>{modelCategoryNumber(category.id)}</span><strong><ExhibitionText>{category.name}</ExhibitionText></strong><span aria-hidden="true">↗</span>
+                  <span>{modelCategoryNumber(category.id)}</span><strong translate="no" className="notranslate">{category.name}</strong><span aria-hidden="true">↗</span>
                 </button>
               ))}
             </div>
