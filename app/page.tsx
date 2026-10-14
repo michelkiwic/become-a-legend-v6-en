@@ -861,10 +861,10 @@ export default function Home() {
             ) : (
               <div className="video-wall" aria-label="Twelve animated Yoshi and Moshi videos">
                 {videoWallClips.map((clip, index) => (
+                  <div className="video-wall-cell" key={clip}>
                   <video
                     className="video-wall-clip"
                     src={clip}
-                    key={clip}
                     aria-label={`Yoshi and Moshi video ${index + 1}`}
                     autoPlay
                     loop
@@ -872,6 +872,7 @@ export default function Home() {
                     playsInline
                     preload="auto"
                   />
+                  </div>
                 ))}
                 <h1 className="video-wall-title" id="category-detail-title">Films + Performances</h1>
               </div>

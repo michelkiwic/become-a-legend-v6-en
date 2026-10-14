@@ -13,6 +13,7 @@ const eslintConfig = defineConfig([
     "dist/**",
     "github-pages-dist/**",
     "metanet-dist/**",
+    "github-pages-dist/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
