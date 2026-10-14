@@ -7,8 +7,8 @@ function ExhibitionText({ children }: { children: string }) {
   const names = /(\b(?:become\s+a\s+legend|dance\s+dolls|the\s+ensemble|bla\s+blaa\s+blaa|the\s+audience|the\s+fourth\s+wall|yoshini\s*(?:\+|&|and)\s*moshini)\b)/gi;
   return children.split(names).map((part, index) =>
     index % 2 === 1 ? (
-      <span key={index} translate="no" className="notranslate" lang="en">{part}</span>
-    ) : part,
+      <span key={index} translate="no" className="notranslate">{part}</span>
+    ) : part ? <span key={index} translate="yes">{part}</span> : null,
   );
 }
 
@@ -663,6 +663,7 @@ export default function Home() {
 
     <main
       className={`site-shell${hasEntered ? " is-revealed" : ""}${menuOpen ? " has-menu-open" : ""}`}
+      translate="yes"
       aria-hidden={!hasEntered}
       inert={!hasEntered}
     >
@@ -723,6 +724,7 @@ export default function Home() {
             </div>
           <div
             className={`category-detail category-detail-${detailId}${detailCategory ? "" : " category-detail-information"}${detailId !== "07" ? " category-detail-unified" : ""}`}
+            translate="yes"
             aria-labelledby="category-detail-title"
             key={detailId}
           >
@@ -738,22 +740,21 @@ export default function Home() {
                     </button>
                   </div>
                   <h1
-                    className={`detail-primary-title${detailId === "03" ? " detail-primary-title-pair notranslate" : ""}`}
+                    className={`detail-primary-title${detailId === "03" ? " detail-primary-title-pair" : ""}`}
                     id="category-detail-title"
-                    translate={detailId === "03" ? "no" : undefined}
-                    lang={detailId === "03" ? "en" : undefined}
+                    translate="yes"
                   >
                     {detailId === "03" ? (
                       <>
-                        <span>Yoshini</span>
+                        <span translate="no" className="notranslate">Yoshini</span>
                         <span className="detail-title-plus">+</span>
-                        <span>Moshini</span>
+                        <span translate="no" className="notranslate">Moshini</span>
                       </>
                     ) : <ExhibitionText>{activeDetailContent.title}</ExhibitionText>}
                   </h1>
-                  <p className="detail-kicker">{activeDetailContent.kicker}</p>
+                  <p className="detail-kicker" translate="yes">{activeDetailContent.kicker}</p>
                 </header>
-                <div className={`fourth-wall-media notranslate${["06", "08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`} translate="no" lang="en">
+                <div className={`fourth-wall-media${["06", "08", "contacts", "inventory", "finances"].includes(detailId ?? "") ? " single-detail-media" : ""}`}>
                   {detailId === "06" ? (
                     <div className="fourth-wall-media-cell fourth-wall-media-cell-motion detail-video-cell">
                       <video
@@ -891,19 +892,20 @@ export default function Home() {
           {activeDetailContent ? (
             <article
               className={`detail-text-below${isDetailOpen ? "" : " is-closing"}`}
+              translate="yes"
               aria-labelledby="category-detail-title"
             >
               {activeDetailContent.spec ? (
-                <h2 className="detail-spec-heading">{activeDetailContent.spec}</h2>
+                <h2 className="detail-spec-heading" translate="yes">{activeDetailContent.spec}</h2>
               ) : null}
               {activeDetailContent.sections
                 .slice(0, detailId === "08" ? 2 : undefined)
                 .map((section, sectionIndex) => (
-                <section className="detail-text-section" key={`below-${detailId}-section-${sectionIndex}`}>
+                <section className="detail-text-section" translate="yes" key={`below-${detailId}-section-${sectionIndex}`}>
                   {section.heading ? <h2><ExhibitionText>{section.heading}</ExhibitionText></h2> : null}
                   {section.paragraphs?.map((paragraph, paragraphIndex) =>
                     detailId === "contacts" && sectionIndex === 0 && paragraphIndex === 0 ? (
-                      <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
+                      <p translate="yes" key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
                         Via Industria 21<br />
                         6850 Mendrisio<br />
                         Switzerland<br /><br />
@@ -911,7 +913,7 @@ export default function Home() {
                         <a href="https://www.yoshi-moshi.com" target="_blank" rel="noreferrer">www.yoshi-moshi.com</a>
                       </p>
                     ) : (
-                      <p key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
+                      <p translate="yes" key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
                         <ExhibitionText>{paragraph}</ExhibitionText>
                       </p>
                     ),
@@ -919,7 +921,7 @@ export default function Home() {
                   {section.items ? (
                     <ul>
                       {section.items.map((item) => (
-                        <li key={item}><ExhibitionText>{item}</ExhibitionText></li>
+                        <li key={item} translate="yes"><ExhibitionText>{item}</ExhibitionText></li>
                       ))}
                     </ul>
                   ) : null}
