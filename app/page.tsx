@@ -2,16 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Protect exhibition and artwork names while leaving surrounding text translatable.
-function ExhibitionText({ children }: { children: string }) {
-  const names = /(\b(?:become\s+a\s+legend|dance\s+dolls|the\s+ensemble|bla\s+blaa\s+blaa|the\s+audience|the\s+fourth\s+wall|yoshini\s*(?:\+|&|and)\s*moshini)\b)/gi;
-  return children.split(names).map((part, index) =>
-    index % 2 === 1 ? (
-      <span key={index} translate="no" className="notranslate">{part}</span>
-    ) : part ? <span key={index} translate="yes">{part}</span> : null,
-  );
-}
-
 type Category = {
   id: string;
   name: string;
@@ -740,7 +730,7 @@ export default function Home() {
                     </button>
                   </div>
                   <h1
-                    className={`detail-primary-title${detailId === "03" ? " detail-primary-title-pair" : ""}`}
+                    className={`detail-primary-title notranslate${detailId === "03" ? " detail-primary-title-pair" : ""}`}
                     id="category-detail-title"
                     translate="no"
                   >
@@ -903,7 +893,7 @@ export default function Home() {
                 .slice(0, detailId === "08" ? 2 : undefined)
                 .map((section, sectionIndex) => (
                 <section className="detail-text-section" translate="yes" key={`below-${detailId}-section-${sectionIndex}`}>
-                  {section.heading ? <h2><ExhibitionText>{section.heading}</ExhibitionText></h2> : null}
+                  {section.heading ? <h2 translate="yes">{section.heading}</h2> : null}
                   {section.paragraphs?.map((paragraph, paragraphIndex) =>
                     detailId === "contacts" && sectionIndex === 0 && paragraphIndex === 0 ? (
                       <p translate="yes" key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
@@ -915,14 +905,14 @@ export default function Home() {
                       </p>
                     ) : (
                       <p translate="yes" key={`below-${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>
-                        <ExhibitionText>{paragraph}</ExhibitionText>
+                        <span translate="yes">{paragraph}</span>
                       </p>
                     ),
                   )}
                   {section.items ? (
                     <ul>
                       {section.items.map((item) => (
-                        <li key={item} translate="yes"><ExhibitionText>{item}</ExhibitionText></li>
+                        <li key={item} translate="yes">{item}</li>
                       ))}
                     </ul>
                   ) : null}
