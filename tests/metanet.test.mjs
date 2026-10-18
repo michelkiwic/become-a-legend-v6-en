@@ -11,6 +11,8 @@ test("the static site uses the domain root and blocks indexing", async () => {
   ]);
 
   assert.match(html, /name="robots" content="noindex, nofollow"/);
+  assert.match(html, /googletagmanager\.com\/gtag\/js\?id=G-WHJSPCQ7WX/);
+  assert.match(html, /gtag\('config', 'G-WHJSPCQ7WX'\)/);
   assert.match(layout, /robots:\s*\{/);
   assert.match(layout, /index:\s*false/);
   assert.match(layout, /follow:\s*false/);
